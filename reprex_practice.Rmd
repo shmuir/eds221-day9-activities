@@ -47,7 +47,10 @@ mack_creek_lengths <- mack_creek_vertebrates %>%
 ```
 
 ```{r}
-mack_creek_vertebrates %>%
+library(tidyverse)
+library(palmerpenguins)
+
+penguins %>%
   mutate(across(where(is.character, tolower)))
 ```
 
@@ -67,5 +70,14 @@ mack_creek_vertebrates %>%
          labs(x = "Cutthroat trout length (cm)",
               y = "Weight (g)")
 ```
+
+```{r}
+library(tidyverse)
+
+ggplot(mtcars, aes(x = mpg, y = hp)) +
+         geom_point(aes(shape = 12), color = "purple")
+```
+
+
 
 ## End
